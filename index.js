@@ -15,7 +15,7 @@ let firefoxContext;
 (async () => {
     try {
         firefoxBrowser = await chromium.launch({
-            headless: true,
+            headless: false,
             args: ['--single-process', '--no-sandbox', '--disable-setuid-sandbox'],
         });
 
