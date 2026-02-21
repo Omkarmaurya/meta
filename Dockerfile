@@ -13,7 +13,7 @@ COPY package*.json ./
 RUN npm install
 
 # Install Playwright browsers
-RUN npx playwright install firefox
+RUN yarn playwright install firefox
 
 # Copy the rest of the app
 COPY . .
