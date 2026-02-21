@@ -15,7 +15,8 @@ let firefoxContext;
 (async () => {
     try {
         firefoxBrowser = await firefox.launch({
-            headless: true
+            headless: true,
+            args: ['--no-sandbox', '--disable-setuid-sandbox']
         });
 
         firefoxContext = await firefoxBrowser.newContext({
