@@ -1,5 +1,5 @@
 const express = require('express');
-const { firefox } = require('playwright');
+const { webkit } = require('playwright');
 const cors = require('cors');
 
 const app = express();
@@ -14,7 +14,7 @@ let firefoxContext;
 // ================= LAUNCH FIREFOX ONCE =================
 (async () => {
     try {
-        firefoxBrowser = await firefox.launch({
+        firefoxBrowser = await webkit.launch({
             headless: true,
             args: ['--no-sandbox', '--disable-setuid-sandbox']
         });
